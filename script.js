@@ -1,10 +1,17 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const orderForm = document.getElementById('order-form');
-    orderForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        const name = document.getElementById('name').value;
-        const address = document.getElementById('address').value;
-        alert(`Thank you, ${name}. Your order will be delivered to ${address} shortly.`);
-        // Further processing can be added here
-    });
-});
+function order(itemName, price) {
+    alert('Order placed for ' + itemName + ' - $' + price);
+}
+
+function validateForm() {
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+
+    if (name === '' || email === '' || message === '') {
+        alert('All fields must be filled out');
+        return false;
+    }
+
+    return true;
+}
+
