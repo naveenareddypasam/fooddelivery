@@ -3,48 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Food Delivery</title>
     <link rel="stylesheet" href="style.css">
+    <title>Food Delivery</title>
 </head>
 <body>
     <header>
-        <nav id="navbar">
-            <div class="container">
-                <h1 id="logo"><a href="index.html">FoodDelivery</a></h1>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#order">Order</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
     <section id="home">
-        <div class="container">
-            <h1>Welcome to FoodDelivery</h1>
-            <p>Your favorite meals delivered fast at your door.</p>
+       <div class="background-image">
+    <img src=" " alt="  ">
+</div>
+
+        <div class="content">
+            <h1>Welcome to Our Food Delivery Service</h1>
+            <p>Delicious meals delivered to your doorstep.</p>
+            <a href="#menu" class="btn">View Menu</a>
         </div>
     </section>
 
-    <section id="menu" class="container">
-        <!-- Menu items here -->
+    <section id="menu">
+        <!-- Menu items with images, descriptions, and prices -->
+        <div class="menu-item">
+            <img src="C:\Users\navee\Desktop\FOODDELIVERY\background-image.jpeg" alt="Food Item 1">
+            <h2>Food Item 1</h2>
+            <p>Description of Food Item 1. Lorem ipsum dolor sit amet.</p>
+            <span>$10.99</span>
+            <button class="order-btn" onclick="order('Food Item 1', 10.99)">Order Now</button>
+        </div>
+
+        <!-- Repeat similar structure for other menu items -->
     </section>
 
-    <section id="order" class="container">
-        <h2>Place Your Order</h2>
-        <form id="order-form">
-            <input type="text" id="name" name="name" placeholder="Your Name">
-            <input type="text" id="address" name="address" placeholder="Delivery Address">
-            <button type="submit">Order Now</button>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a passionate team dedicated to delivering high-quality and delicious food to your doorstep.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form method="post" action="index.php" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit" name="submit">Submit</button>
         </form>
     </section>
 
-    <footer id="main-footer" class="container">
-        <p>FoodDelivery &copy; 2023</p>
+    <footer>
+        <p>&copy; 2023 Food Delivery</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
+
