@@ -1,74 +1,51 @@
-/* Reset Styles */
-* {
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-}
-
-/* Navigation Bar */
-#navbar {
+header {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
 }
 
-#navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#navbar ul {
+nav ul {
     list-style: none;
-    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
-#navbar ul li {
-    margin: 0 20px;
+nav ul li {
+    display: inline;
+    margin-right: 20px;
 }
 
-#navbar ul li a {
+section {
+    padding: 40px;
+}
+
+.background-image {
+    /* Add styles for your background image or video */
+}
+
+.btn, .order-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
     color: #fff;
     text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* Sections */
-section {
-    padding: 20px 0;
-    text-align: center;
+.menu-item {
+    margin-bottom: 30px;
 }
 
-/* Footer */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Media Queries */
-@media (max-width: 600px) {
-    #navbar .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    #navbar ul {
-        flex-direction: column;
-        width: 100%;
-        text-align: left;
-    }
-
-    #navbar ul li {
-        margin: 10px 0;
-    }
 }
